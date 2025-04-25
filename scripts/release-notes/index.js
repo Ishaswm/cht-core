@@ -280,15 +280,18 @@ const formatCommits = (commits) => {
 };
 
 const output = ({ warnings, types }, commits) => {
-  console.log(`
+const currentDate = new Date().toISOString().split('T')[0]; 
+console.log(`
 ---
 title: "${MILESTONE_NAME} release notes"
 linkTitle: "${MILESTONE_NAME}"
+date: ${currentDate}  
 weight:
 description: >
 relevantLinks: >
 toc_hide: true
 ---
+`);
 
 ## Known issues
 
